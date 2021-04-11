@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Play {
     @Id
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
     @Basic
     @Column(name = "play_time", nullable = false)
     private Timestamp playTime;
@@ -27,15 +27,11 @@ public class Play {
 
     @Id
     @GeneratedValue
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setId(Long id) {
         this.id = id;
     }
 

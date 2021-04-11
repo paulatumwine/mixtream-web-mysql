@@ -8,7 +8,7 @@ import java.util.Objects;
 public class User {
     @Id
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
     @Basic
     @Column(name = "email", nullable = false, length = 255)
     private String email;
@@ -25,15 +25,11 @@ public class User {
 
     @Id
     @GeneratedValue
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setId(Long id) {
         this.id = id;
     }
 

@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Artist {
     @Id
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
     @Basic
     @Column(name = "name", nullable = false, length = 255)
     private String name;
@@ -20,15 +20,11 @@ public class Artist {
 
     @Id
     @GeneratedValue
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setId(Long id) {
         this.id = id;
     }
 
