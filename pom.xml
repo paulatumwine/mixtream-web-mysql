@@ -39,6 +39,26 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>com.cmeza</groupId>
+                <artifactId>spring-data-generator</artifactId>
+                <version>1.1.8</version>
+                <configuration>
+                    <entity-package>
+                        <param>org.mixtream.mixtreamwebmysql.model</param>
+                    </entity-package>
+                    <repository-package>org.mixtream.mixtreamwebmysql.repository</repository-package>
+                    <repository-postfix>Repository</repository-postfix>
+                    <manager-package>org.mixtream.mixtreamwebmysql.service</manager-package>
+                    <manager-postfix>Service</manager-postfix>
+                    <only-annotations>false</only-annotations>
+                    <overwrite>false</overwrite>
+                    <additional-extends>
+                        <param>org.springframework.data.querydsl.QuerydslPredicateExecutor</param>
+                    </additional-extends>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
